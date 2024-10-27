@@ -1,0 +1,150 @@
+/* Reset some default browser styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: 'Inter', sans-serif;
+    color: #393939;
+    background-color: #F4F2EF;
+    overflow-x: hidden;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    right: 0;
+}
+
+/* Navigation styling */
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 30px;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+/* Intro section styling */
+section#intro {
+    display: flex;
+    height: 100vh;
+    font-family: "Inria Serif";
+    align-items: center;
+}
+
+/* Left side - Background image container */
+.background-image {
+    width: 40vw;
+    height: 105vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 0px 0px 30px 0px;
+}
+
+/* Right side - Text overlay */
+.overlay-container {
+    margin-left: 45vw; /* Positioning to the right of the background image */
+    padding: 0 15px;
+}
+
+.overlay-container h1 {
+    font-size: 4em;
+    margin-bottom: 10px;
+    color: #393939;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 15px;
+}
+
+.overlay-container p {
+    font-size: 1.75em;
+    font-style: italic;
+    color: #675C5C;
+}
+
+/* Projects Section */
+#projects {
+    padding: 50px 20px;
+}
+
+#projects h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #393939;
+    font-family: "Inria Serif";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    color: #393939;
+}
+
+/* Project Card Styling */
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+}
+
+.project-details {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.project-details h3 {
+    font-size: 1.75em;
+    color: #393939;
+    font-family: "Inria Serif";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.project-details p {
+    font-size: 1.2em;
+    font-family: "Inria Serif";
+    margin-bottom: 10px;
+    color: #555;
+}
+
+.project-image {
+    width: 400px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Tags Styling */
+.tags {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #d4d4d4;
+    color: #555;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+}
