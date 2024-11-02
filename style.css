@@ -278,51 +278,8 @@ section#intro {
     transform: scale(1.1); /* Slightly enlarges on hover */
 }
 
-/* Media Query for tablets and small laptops */
-@media (max-width: 768px) {
-    /* Stack header links vertically */
-    header nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    /* Resize project cards for smaller screens */
-    .project-card {
-        flex-direction: column;    /* Stack content vertically */
-        padding: 20px;
-        max-width: 100%;           /* Full width */
-        margin: 20px 0;            /* Add margin for spacing */
-    }
-
-    /* Adjust project images */
-    .project-image {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Adjust font sizes */
-    h1 {
-        font-size: 2.5em;
-    }
-
-    h2 {
-        font-size: 2em;
-    }
-
-    p {
-        font-size: 1em;
-    }
-
-    /* Center contact icons */
-    .contact-icons {
-        flex-direction: row;
-        gap: 15px;
-    }
-}
-
 /* Media Query for mobile devices */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     /* Stack elements in intro section */
     #intro {
         flex-direction: column;
@@ -368,25 +325,32 @@ section#intro {
     }
 
     /* Project Card 2 adjustments for mobile */
+    .project-card-2 {
+        display: flex;
+        flex-direction: column;          /* Stack content vertically */
+        padding: 15px;
+        max-width: 100%;                 /* Full width for mobile */
+    }
+
     .project-card-2 .project-text {
         display: flex;
-        flex-direction: column;           /* Stack description and tags vertically */
-        align-items: flex-start;
+        flex-direction: column;          /* Stack description and tags vertically */
+        align-items: flex-start;         /* Align items to the left */
     }
 
     .project-card-2 .summary {
-        margin-bottom: 20px;              /* Space between description and tags */
+        margin-bottom: 20px;             /* Space between description and tags */
     }
 
     .project-card-2 .tags {
         display: flex;
-        flex-direction: column;           /* Stack tags vertically */
-        width: 100%;                      /* Full width of container */
+        flex-direction: column;          /* Stack tags vertically */
+        width: 100%;                     /* Make tags take full width */
         margin-top: 10px;
     }
 
     .project-card-2 .tags span {
-        display: block;
+        display: block;                  /* Make each tag take up full width */
         width: 100%;
         background-color: rgba(177, 181, 197, 0.50);
         color: #393939;
@@ -395,5 +359,21 @@ section#intro {
         font-size: 0.9em;
         text-align: left;
         letter-spacing: 0.8px;
+    }
+
+    /* Ensure project images are below description and tags */
+    .project-card-2 .project-images {
+        display: flex;
+        flex-direction: column;          /* Keep images stacked vertically */
+        align-items: center;
+        margin-top: 20px;                /* Space between tags and image */
+        width: 100%;                     /* Full width */
+    }
+
+    .project-card-2 .project-images .project-image {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
     }
 }
