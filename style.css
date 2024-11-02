@@ -277,3 +277,85 @@ section#intro {
 .contact-icon:hover {
     transform: scale(1.1); /* Slightly enlarges on hover */
 }
+
+/* Media Query for tablets and small laptops */
+@media (max-width: 768px) {
+    /* Stack header links vertically */
+    header nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Resize project cards for smaller screens */
+    .project-card {
+        flex-direction: column;    /* Stack content vertically */
+        padding: 20px;
+        max-width: 100%;           /* Full width */
+        margin: 20px 0;            /* Add margin for spacing */
+    }
+
+    /* Adjust project images */
+    .project-image {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Adjust font sizes */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    /* Center contact icons */
+    .contact-icons {
+        flex-direction: row;
+        gap: 15px;
+    }
+}
+
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+    /* Make header links smaller */
+    header nav a {
+        font-size: 1em;
+        margin: 10px 0;
+    }
+
+    /* Reduce padding on sections */
+    #intro,
+    #projects,
+    #contact {
+        padding: 20px 10px;
+    }
+
+    /* Stack elements in intro section */
+    #intro {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Resize and center project cards */
+    .project-card {
+        padding: 15px;
+    }
+
+    .overlay-container {
+        margin-left: 0;
+        padding: 0;
+    }
+
+    /* Contact icons in a row */
+    .contact-icons {
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+}
