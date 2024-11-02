@@ -321,88 +321,39 @@ section#intro {
     }
 }
 
-/* Media Query for mobile devices with max-width of 600px */
-@media (max-width: 600px) {
-    /* Stack header links vertically */
-    header nav {
+/* Media Query for mobile devices */
+/* Media Query for mobile devices */
+@media (max-width: 480px) {
+    /* Stack project card elements with image below description */
+    .project-card {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: column-reverse;   /* Image below description */
+        padding: 15px;
+        max-width: 100%;
     }
 
-    /* Make header links smaller */
-    header nav a {
-        font-size: 1em;
-        margin: 5px 0;
+    /* Ensure images take full width on mobile and add extra spacing */
+    .project-image {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;                 /* Increased margin for more spacing */
+        border-radius: 8px;
     }
 
-    /* Reduce padding on sections */
-    #intro,
-    #projects,
-    #contact {
-        padding: 20px 10px;
-    }
-
-    /* Stack elements in intro section */
-    #intro {
-        flex-direction: column;
-        text-align: center;
-        padding: 20px;
-    }
-
-    /* Center the overlay container in the intro section */
-    .overlay-container {
-        margin-left: 0;
+    /* Adjust project details for better readability on mobile */
+    .project-details {
         padding: 0;
         text-align: center;
     }
 
-    .overlay-container h1 {
-        font-size: 2.2em;
-        margin-bottom: 10px;
+    .project-details h3, .project-details .role, .project-details p {
+        text-align: center;
     }
 
-    .overlay-container p {
-        font-size: 1.2em;
-    }
-
-    /* Resize project cards for full width and stack content vertically */
-    .project-card {
-        flex-direction: column;       /* Stack content vertically */
-        padding: 20px;
-        max-width: 100%;              /* Full width on mobile */
-        margin: 20px 0;               /* Space between cards */
-    }
-
-    .project-details h3 {
-        font-size: 1.4em;
-        margin-bottom: 5px;
-    }
-
-    .project-details p {
-        font-size: 1em;
-    }
-
-    /* Adjust project images */
-    .project-image {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-        margin-top: 10px;
-    }
-
-    /* Center the contact icons in a row */
+    /* Center contact icons */
     .contact-icons {
-        display: flex;
+        flex-direction: row;
         justify-content: center;
-        gap: 20px;
-        margin-top: 20px;
-    }
-
-    .contact-icon {
-        width: 40px; /* Adjust size of icons for smaller screens */
-        height: 40px;
+        gap: 10px;
     }
 }
