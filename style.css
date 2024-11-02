@@ -322,8 +322,43 @@ section#intro {
 }
 
 /* Media Query for mobile devices */
-/* Media Query for mobile devices */
 @media (max-width: 480px) {
+    /* Stack elements in intro section */
+    #intro {
+        flex-direction: column;
+        text-align: center;
+        height: auto;               /* Adjust height to fit content */
+        padding: 20px;
+    }
+
+    /* Responsive background image for intro section */
+    .background-image {
+        width: 100%;                /* Full width for mobile */
+        height: 300px;              /* Adjust height as needed */
+        object-fit: cover;          /* Cover the entire container */
+        position: relative;         /* Adjust positioning */
+        left: 0;
+        top: 0;
+        border-radius: 0;           /* Remove border-radius for a simpler look */
+    }
+
+    /* Center the overlay container text */
+    .overlay-container {
+        margin-left: 0;
+        padding: 0;
+        text-align: center;
+        margin-top: 20px;           /* Add spacing above the text */
+    }
+
+    .overlay-container h1 {
+        font-size: 2em;             /* Adjust font size for mobile */
+        margin-bottom: 10px;
+    }
+
+    .overlay-container p {
+        font-size: 1.2em;           /* Adjust font size for mobile */
+    }
+
     /* Stack project card elements with image below description */
     .project-card {
         display: flex;
@@ -332,28 +367,33 @@ section#intro {
         max-width: 100%;
     }
 
-    /* Ensure images take full width on mobile and add extra spacing */
-    .project-image {
+    /* Project Card 2 adjustments for mobile */
+    .project-card-2 .project-text {
+        display: flex;
+        flex-direction: column;           /* Stack description and tags vertically */
+        align-items: flex-start;
+    }
+
+    .project-card-2 .summary {
+        margin-bottom: 20px;              /* Space between description and tags */
+    }
+
+    .project-card-2 .tags {
+        display: flex;
+        flex-direction: column;           /* Stack tags vertically */
+        width: 100%;                      /* Full width of container */
+        margin-top: 10px;
+    }
+
+    .project-card-2 .tags span {
+        display: block;
         width: 100%;
-        height: auto;
-        margin-top: 20px;                 /* Increased margin for more spacing */
-        border-radius: 8px;
-    }
-
-    /* Adjust project details for better readability on mobile */
-    .project-details {
-        padding: 0;
-        text-align: center;
-    }
-
-    .project-details h3, .project-details .role, .project-details p {
-        text-align: center;
-    }
-
-    /* Center contact icons */
-    .contact-icons {
-        flex-direction: row;
-        justify-content: center;
-        gap: 10px;
+        background-color: rgba(177, 181, 197, 0.50);
+        color: #393939;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 0.9em;
+        text-align: left;
+        letter-spacing: 0.8px;
     }
 }
