@@ -30,10 +30,10 @@
             <h2>Explore My Projects</h2>
         
             <!-- Project 1 -->
-            <div class="project-card">
+            <div class="project-card project-card-1">
                 <div class="project-details">
                     <h3>Alana Enabled</h3>
-                    <p><em>UX Consultant</em></p>
+                    <p class="role">UX Consultant</p>
                     <p>Prototyped and executed brand refresh and website refreshed of e-commerce company Alana Enabled to expand market reach to younger consumers.</p>
                     <div class="tags">
                         <span>UX Research</span>
@@ -45,26 +45,33 @@
             </div>
         
             <!-- Project 2 -->
-            <div class="project-card">
+            <div class="project-card project-card-2">
                 <div class="project-details">
-                    <h3>Visual Studio Code Plug-In</h3>
-                    <p><em>TCS Innovation Team Intern</em></p>
-                    <p>Designed and developed 3 Visual Studio Code plug-ins powered by GenAI to streamline coding for developers. Solo-developed code editor prototype with front-end technologies with functional chat box powered by OpenAI.</p>
-                    <div class="tags">
-                        <span>UX Research</span>
-                        <span>Hi-fidelity Designs</span>
-                        <span>Front-end Development</span>
-                        <span>HTML/CSS, Javascript, React</span>
+                    <div class="project-text">
+                        <div class="summary">
+                            <h3>Visual Studio Code Plug-In</h3>
+                            <p class="role"><em>TCS Innovation Team Intern</em></p>
+                            <p>Designed and developed 3 Visual Studio Code plug-ins powered by GenAI to streamline coding for developers. Solo-developed code editor prototype with front-end technologies with functional chat box powered by OpenAI.</p>
+                        </div>
+                        <div class="tags">
+                            <span>UX Research</span>
+                            <span>Hi-fidelity Designs</span>
+                            <span>Front-end Development</span>
+                            <span>HTML/CSS, Javascript, React</span>
+                        </div>
                     </div>
                 </div>
-                <img src="VSCChatBox.jpg" alt="Visual Studio Code Plug-In Screenshot" class="project-image">
+                <div class="project-images">
+                    <img src="VSCChatBox.jpg" alt="Visual Studio Code Plug-In Screenshot" class="project-image">
+                    <img src="VSCFrontEnd.jpg" alt="Additional View Screenshot" class="project-image">
+                </div>
             </div>
         
             <!-- Project 3 -->
-            <div class="project-card">
+            <div class="project-card project-card-3">
                 <div class="project-details">
                     <h3>Gravidy</h3>
-                    <p><em>Full Stack Developer</em></p>
+                    <p class="role">Full Stack Developer</p>
                     <p>Designed and deployed responsive user log-in systems for web-app, implementing cookies using HTTP requests.</p>
                     <div class="tags">
                         <span>Front-end Development</span>
@@ -74,12 +81,20 @@
                 </div>
                 <img src="gravidy.jpg.png" alt="Gravidy Project Screenshot" class="project-image">
             </div>
-        </section>
+        </section>        
     
+        <!-- Contact Section -->
         <!-- Contact Section -->
         <section id="contact">
             <h2>Contact Me</h2>
-            <!-- Contact information goes here -->
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/katechier/" target="_blank">
+                    <img src="LinkedIn.jpg" alt="LinkedIn" class="contact-icon">
+                </a>
+                <a href="mailto:katechier@berkeley.edu">
+                    <img src="Mail.jpg" alt="Email" class="contact-icon">
+                </a>
+            </div>
         </section>
 
     </body>

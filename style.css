@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Body styling */
 body {
     font-family: 'Inter', sans-serif;
@@ -91,7 +95,6 @@ section#intro {
     line-height: normal;
     margin-top: 100px;
     margin-bottom: 30px;
-    color: #393939;
 }
 
 /* Project Card Styling */
@@ -99,10 +102,53 @@ section#intro {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
     border-radius: 10px;
     margin: 20px auto;
+    max-width: 900px;
+}
+
+/* Specific background colors for each project card */
+.project-card-1 {
+    background-color: rgba(210, 214, 197, 0.50);
+}
+
+.project-card-2 {
+    background-color: rgba(213, 215, 225, 0.50);
+    flex-direction: column;
+    padding: 40px;
+}
+
+.project-card-2 .summary {
+    margin-right: 30px;
+}
+
+.project-card-2 .project-details {
+    padding-bottom: 20px;
+}
+
+.project-card-2 .project-text {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-card-2 .project-images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.project-card-2 .project-images .project-image {
+    width: 100%;
     max-width: 800px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.project-card-3 {
+    background-color: rgba(203, 192, 206, 0.40);
 }
 
 .project-details {
@@ -111,40 +157,123 @@ section#intro {
 }
 
 .project-details h3 {
-    font-size: 1.75em;
     color: #393939;
     font-family: "Inria Serif";
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+    font-size: 1.5em;
     margin-bottom: 5px;
+    color: #333;
+}
+
+.project-details .role {
+    color: #3F3737;
+    font-family: "Inria Serif";
+    font-style: italic;
+    line-height: normal;
+    font-size: 1.1em;
+    margin-top: 6px;
 }
 
 .project-details p {
-    font-size: 1.2em;
-    font-family: "Inria Serif";
-    margin-bottom: 10px;
-    color: #555;
+    margin-bottom: 15px;
+    color: #393939;
+    font-family: Inter;
+    font-weight: 400;
+    line-height: 25px; 
+    letter-spacing: .5px;
+    font-size: .9em;
 }
 
 .project-image {
-    width: 400px;
+    width: 55%;
     height: auto;
     border-radius: 8px;
+}
+
+.project-card-3 .project-image {
+    width: 50%;
 }
 
 /* Tags Styling */
 .tags {
     display: flex;
-    gap: 10px;
+    gap: 5px;
     flex-wrap: wrap;
 }
 
-.tags span {
-    display: inline-block;
-    background-color: #d4d4d4;
-    color: #555;
+.project-card-2 .tags {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Make the tags container take up full width */
+    margin-top: 10px;
+    margin-left: 30px;
+}
+
+.project-card-1 .tags span {
+    background-color: #CACFB9;
+}
+
+.project-card-2 .tags span {
+    display: block; /* Make each tag take up full width */
+    width: 100%; /* Full width inside the container */
+    background-color: rgba(177, 181, 197, 0.50);
+    color: #393939;
     padding: 5px 10px;
     border-radius: 5px;
     font-size: 0.9em;
+    text-align: left; 
+    letter-spacing: 0.8px;
+}
+
+.project-card-3 .tags span {
+    background-color: #CBC0CE;
+}
+
+.tags span {
+    display: block;
+    width: 80%;
+    background-color: #d4d4d4;
+    color: #393939;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    letter-spacing: .8px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 20px;
+}
+
+#contact h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #393939;
+    font-family: "Inria Serif";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    gap: 60px;
+    margin-top: 20px;
+}
+
+.contact-icon {
+    width: 50px; 
+    height: 50px;
+    object-fit: contain;
+    transition: transform 0.2s ease; /* Smooth scaling effect */
+}
+
+.contact-icon:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
 }
